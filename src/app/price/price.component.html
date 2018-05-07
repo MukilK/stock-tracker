@@ -1,7 +1,9 @@
-<h2>{{ company.name }} - {{company.price}}</h2>
-<div>{{company.shortName}}</div>
-<div>{{company.yearlyHigh}}</div>
-<div>{{company.yearlyLow}}</div>
-
-
+<div>
+    <input [(ngModel)]="searchText" placeholder="Enter the ticker symbol">
+    <ul>
+        <li *ngFor="let c of companies | filter : searchText">
+          {{c.Ticker}}
+        </li>
+      </ul>
+</div>
 
